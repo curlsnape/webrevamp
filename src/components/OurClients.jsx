@@ -13,99 +13,53 @@ const OurClients = () => {
 
   useEffect(() => {
     controls.start({
-      x: ["0%", "-100%"],
+      x: ["0%", "-50%"],
       transition: {
         x: {
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
-          duration: 30,
+          duration: 30, // slower for better visibility
         },
       },
     });
   }, [controls]);
 
   return (
-    <section className="py-20 px-4 text-center overflow-hidden bg-gradient-to-b from-white to-blue-50">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto"
+    <section className="py-20 px-4 text-center overflow-hidden bg-white">
+      <motion.h2
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
       >
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
-        >
-          Trusted by <span className="text-blue-600">Innovators</span>
-        </motion.h2>
+        Our Clients
+      </motion.h2>
 
-        <motion.p
-          className="max-w-2xl mx-auto text-lg text-gray-600 mb-12"
-        >
-          Partnered with forward-thinking companies to transform education through technology
-        </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.7 }}
+        className="max-w-2xl mx-auto text-gray-600 mb-10"
+      >
+        Trusted by forward-thinking companies to elevate education through
+        innovation and technology.
+      </motion.p>
 
-        {/* Double Marquee Container */}
-        <div className="relative w-full h-48 md:h-60 overflow-hidden group">
-          {/* Gradient Fades */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
-          
-          {/* First Marquee */}
-          <motion.div 
-            className="absolute flex items-center h-full"
-            animate={controls}
-          >
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
-              <div key={`first-${i}`} className="px-6 md:px-10 flex">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <img
-                    src={logo}
-                    alt={`Client ${i + 1}`}
-                    className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-500"
-                  />
-                </motion.div>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Second Marquee (offset) */}
-          <motion.div 
-            className="absolute flex items-center h-full left-[100%]"
-            animate={controls}
-          >
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
-              <div key={`second-${i}`} className="px-6 md:px-10 flex">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <img
-                    src={logo}
-                    alt={`Client ${i + 1}`}
-                    className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-500"
-                  />
-                </motion.div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-12"
-        >
-          <button className="px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
-            Become a Partner
-          </button>
+      <div className="relative w-full h-36 overflow-hidden bg-gradient-to-r from-blue-100 via-white to-blue-100 shadow-inner rounded-lg">
+        <motion.div className="flex w-max items-center" animate={controls}>
+          {[...clientLogos, ...clientLogos].map((logo, i) => (
+            <div key={i} className="px-8">
+              <motion.img
+                whileHover={{ scale: 1.15 }}
+                src={logo}
+                alt={`Client ${i + 1}`}
+                className="h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 ease-in-out drop-shadow-md"
+              />
+            </div>
+          ))}
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };
