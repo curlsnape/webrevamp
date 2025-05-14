@@ -46,7 +46,7 @@ const OurClients = () => {
         innovation and technology.
       </motion.p>
 
-      <div className="relative w-full h-36 overflow-hidden bg-gradient-to-r from-blue-100 via-white to-blue-100 shadow-inner rounded-lg">
+      <div className="relative w-full h-36 overflow-hidden bg-gradient-to-r from-blue-200 via-blue-100 to-blue-200 shadow-inner rounded-lg">
         <motion.div className="flex w-max items-center" animate={controls}>
           {[...clientLogos, ...clientLogos].map((logo, i) => (
             <div key={i} className="px-8">
