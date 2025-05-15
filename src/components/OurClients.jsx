@@ -19,7 +19,7 @@ const OurClients = () => {
           repeat: Infinity,
           repeatType: "loop",
           ease: "linear",
-          duration: 30, // slower for better visibility
+          duration: 30, 
         },
       },
     });

@@ -84,7 +84,7 @@ const HomepageHero = () => {
               whileTap={{ scale: 0.98 }}
               className={`${card.color} ${card.hoverColor} ${card.textColor} p-6 rounded-xl shadow-lg cursor-pointer transition-all duration-300 flex flex-col relative overflow-hidden`}
             >
-              {/* Animated background elements */}
+           
               <motion.div 
                 className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-white bg-opacity-10"
                 initial={{ scale: 0.5 }}
@@ -104,7 +104,6 @@ const HomepageHero = () => {
               
               <p className="opacity-90 text-sm mb-4 z-10">{card.description}</p>
               
-              {/* Animated feature list */}
               <motion.ul className="mb-1 z-10">
                 {card.features.map((feature, i) => (
                   <motion.li 
@@ -148,7 +147,7 @@ const HomepageHero = () => {
                 </motion.div>
               </motion.div>
               
-              {/* Animated border */}
+              
               <motion.div 
                 className="absolute inset-0 border-2 border-transparent rounded-xl pointer-events-none"
                 whileHover={{ borderColor: "rgba(255,255,255,0.3)" }}

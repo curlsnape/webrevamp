@@ -120,7 +120,7 @@ const Card = ({ testimonial, index }) => {
           isFlipped ? "rotate-y-180" : ""
         }`}
       >
-        {/* Front Face */}
+        
         <div className="absolute w-full h-full flex justify-center items-center backface-hidden bg-[#0e2378] text-white rounded-lg p-6 shadow-md">
           <div className="flex flex-col justify-between w-full h-full">
             <div className="flex items-center">
@@ -151,7 +151,7 @@ const Card = ({ testimonial, index }) => {
           </div>
         </div>
 
-        {/* Back Face */}
+   
         <div className="absolute flex justify-center items-center w-full h-full backface-hidden bg-indigo-800 text-white rounded-lg p-6 shadow-md rotate-y-180">
           <p className="text-sm">{testimonial.text}</p>
         </div>

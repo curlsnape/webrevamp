@@ -15,7 +15,7 @@ const ReasonsToChoose = () => {
     }),
   };
 
-  // Rotation animation variants
+  
   const rotateVariants = {
     initial: { rotate: 0 },
     animate: {
@@ -104,7 +104,7 @@ const ReasonsToChoose = () => {
           viewBox="0 0 200 200"
           className="h-32 w-32"
         >
-          {/* Rocket with rotating stars */}
+        
           <motion.path
             d="M100 30L80 70L100 60L120 70z"
             fill="#F97316"
@@ -121,7 +121,7 @@ const ReasonsToChoose = () => {
             transition={{ duration: 1, delay: 0.3 }}
           />
 
-          {/* Colorful fire trail */}
+         
           <motion.g
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -147,7 +147,7 @@ const ReasonsToChoose = () => {
             />
           </motion.g>
 
-          {/* Rotating stars */}
+          
           <motion.g
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -201,7 +201,7 @@ const ReasonsToChoose = () => {
           viewBox="0 0 200 200"
           className="h-32 w-32"
         >
-          {/* Trophy with rotating confetti */}
+         
           <motion.path
             d="M70 50H130V90H120V120H80V90H70z"
             fill="#F59E0B"
@@ -224,7 +224,7 @@ const ReasonsToChoose = () => {
             transition={{ delay: 0.5 }}
           />
 
-          {/* Rotating confetti */}
+          
           <motion.g
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -272,7 +272,7 @@ const ReasonsToChoose = () => {
             </motion.g>
           </motion.g>
 
-          {/* Chart lines */}
+         
           <motion.path
             d="M60 150V170H80V140H100V160H120V130H140V180"
             stroke="#6366F1"

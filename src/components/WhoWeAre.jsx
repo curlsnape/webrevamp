@@ -57,7 +57,7 @@ const WhoWeAre = () => {
       </motion.h2>
 
       <div className="flex flex-col md:flex-row items-center gap-12">
-        {/* SVG Animation on Left */}
+       
         <motion.div
           className="w-full md:w-1/2"
           initial="hidden"
@@ -70,7 +70,7 @@ const WhoWeAre = () => {
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-auto"
           >
-            {/* Book Base */}
+            
             <motion.rect
               x="50"
               y="50"
@@ -83,7 +83,7 @@ const WhoWeAre = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             />
             
-            {/* Book Pages */}
+         
             <motion.rect
               x="80"
               y="70"
@@ -95,7 +95,7 @@ const WhoWeAre = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             />
             
-            {/* Book Spine */}
+           
             <motion.rect
               x="350"
               y="50"
@@ -107,7 +107,7 @@ const WhoWeAre = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             />
             
-            {/* Graduation Cap */}
+            
             <motion.path
               d="M200,100 L250,70 L300,100 L250,130 Z"
               fill="#f59e0b"

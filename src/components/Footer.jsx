@@ -68,7 +68,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Us */}
+         
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-sm mb-2">📞 +91-98**********</p>
